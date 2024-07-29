@@ -1,0 +1,42 @@
+// Simple Calculator - Task 2
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int x,y;
+    char oper;
+    char ch;
+    do{
+    cout << "Enter 1st number = ";
+    cin >> x;
+    cout << "Enter 2nd number = ";
+    cin >> y;
+    cout << "Enter any operation:\nAddition -> +\nSubtraction -> -\nMultiplication -> *\nDivision -> /\nModulo -> %\n";
+    cin >> oper;
+    switch(oper)
+    {
+        case '+':
+            cout << "Addition = " << x+y;
+            break;
+        case '-':
+            cout << "Subtration = " << x-y;
+            break;
+        case '*':
+            cout << "Multiplication = " << x*y;
+            break;
+        case '/':
+            cout << "Division = " << x/y;
+            break;
+        case '%':
+            cout << "Remainder = " << x%y;
+            break;
+        default:
+            printf("Invalid operator\n");
+            break;
+    }
+    cout << "\nDo you wish to continue? ";
+    cin >> ch;
+    } while (ch == 'y' || ch == 'Y');
+    return 0;
+}
